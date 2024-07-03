@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bob's Hamburger - VGS integration</title>
+    <script nonce="static-nonce" src="https://js.verygoodvault.com/vgs-collect/2.18.0/vgs-collect.js"></script>
+    <script async crossorigin src="https://applepay.cdn-apple.com/jsapi/1.latest/apple-pay-sdk.js"></script>
+<script src="../static/form.js" defer></script>
+<link rel="stylesheet" href="../static/styles.css" />
+</head>
+  <body>
+
+    <!-- Logo -->
+    <header>
+      <img src="../static/images/logo.png" class="logo">
+    </header>
+
+    <!-- Checkout container -->
+    <div class="container">
+      <div class="order-details">
+          <h2>Your Order Details</h2>
+          <div class="item">
+              <span class="item-label">Selection:</span>
+              <span class="item-value">Royale with Cheese</span>
+          </div>
+          <div class="item">
+              <span class="item-label">Total:</span>
+              <span class="item-value">$5.99</span>
+          </div>
+      </div>
+    </div>
+   
+    <!-- Apple Pay button -->
+    <div class="apple-pay-container">
+      <apple-pay-button buttonstyle="black" type="plain" locale="en-US"></apple-pay-button>
+    </div>
+
+    <!-- Loading Circle -->
+    <div class="loading-container">
+      <div id="loading-circle"></div>
+    </div>
+
+  
+
+
+  </body>
+</html>

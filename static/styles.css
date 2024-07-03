@@ -1,0 +1,202 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+  background-color: #ffffff
+}
+
+
+.apple-pay-container { 
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+
+}
+
+
+apple-pay-button {
+  display: block;
+--apple-pay-button-width: 150px;
+--apple-pay-button-height: 30px;
+--apple-pay-button-border-radius: 3px;
+--apple-pay-button-padding: 0px 0px;
+--apple-pay-button-box-sizing: border-box;
+
+}
+
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  width: 27%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure block-level element behavior */
+  margin: 10px auto; /* Center horizontally and provide 20px margin from the top */
+}
+
+/* ----------Checkout Container--------- */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+.order-details {
+  margin-top: 0px;
+}
+
+.order-details .item {
+  font-size: 15px; 
+  color: #333; 
+  margin-bottom: 10px; 
+}
+
+.item-label {
+  font-weight: bold; 
+}
+
+.item-value {
+  margin-left: 5px;
+  color: #0a0909; 
+}
+
+/* ----------Payment Form Style--------- */
+form {
+  width: 400px;
+  margin: 20px auto;
+}
+
+label {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: .6rem;
+  text-transform: uppercase;
+}
+
+.form-field {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  margin-bottom: 1.6rem;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 0px #bcbcbc;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  background-color: #fff;
+}
+
+.form-field-group {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.form-field-group div {
+  flex: 0 0 50%;
+}
+
+.form-field-group div:first-child div {
+  border-radius: 4px 0 0 4px;
+  clip-path: inset(-3px 0px -3px -3px);
+}
+
+.form-field-group div:last-child div {
+  border-radius: 0 4px 4px 0;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 50%;
+  margin-left: 25%;
+  padding: 10px;
+  background-color: #f13535;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d70000;
+}
+
+#new-payment-button {
+  display: block;
+  margin: 0 auto; 
+  width: 65%;
+}
+
+.form-field.vgs-collect-container__focused {
+  border-color: #989b9e;
+}
+
+.form-field-group .form-field.vgs-collect-container__focused {
+  clip-path: none;
+}
+
+.vgs-collect-container__invalid.vgs-collect-container__dirty:not(.vgs-collect-container__focused),
+.vgs-collect-container__invalid.vgs-collect-container__touched:not(.vgs-collect-container__focused)
+{
+  box-shadow: 0px 0px 3px rgba(255, 0, 0, 1);
+}
+
+.success-message {
+  text-align: center;
+}
+
+/* ----------Loading Circle--------- */
+.loading-container {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(249, 249, 249, 0); /* Fully transparent background */
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#loading-circle {
+  display: none;
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid #f13535; 
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  animation: spin 1s linear infinite; 
+  z-index: -1; 
+  bottom: 20px; 
+  right: 20px; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); } 
+  100% { transform: rotate(360deg); } 
+}
